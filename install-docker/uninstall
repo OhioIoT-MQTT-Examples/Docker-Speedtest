@@ -1,0 +1,13 @@
+#!/bin/bash
+
+
+sudo systemctl stop docker
+sudo systemctl disable docker
+sudo apt remove docker-ce docker-ce-cli containerd.io docker-compose-plugin -y
+sudo apt purge docker-ce docker-ce-cli containerd.io docker-compose-plugin -y
+sudo apt autoremove -y
+sudo pip3 uninstall docker-compose -y 2>/dev/null || true
+sudo deluser lvincek docker
+sudo rm -rf ~/.docker
+
+rm -rf ~/mosquitto

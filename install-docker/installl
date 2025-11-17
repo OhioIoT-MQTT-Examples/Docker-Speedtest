@@ -1,0 +1,56 @@
+#!/bin/bash
+
+sudo apt update
+sudo apt upgrade -y
+curl -sSL https://get.docker.com | sh
+sudo usermod -aG docker lvincek
+sudo systemctl enable docker
+sg docker -c "whoami && groups"
+
+sudo apt install docker-compose-plugin
+sudo pip3 install docker-compose
+
+docker --version
+docker compose version
+
+
+
+
+# MOSQUITTO.CONF
+
+# listener 1883
+# allow_anonymous true
+
+
+
+# DOCKER-COMPOSE.YML
+
+# services:
+#   mosquitto:
+#     image: eclipse-mosquitto:latest
+#     container_name: mosquitto
+#     ports:
+#       - "1883:1883"
+#     volumes:
+#       - ./mosquitto.conf:/mosquitto/config/mosquitto.conf
+
+
+
+cd ~
+mkdir mosquitto
+cd mosquitto
+
+echo "listener 1883" > mosquitto.conf
+echo "allow_anonymous true" >> mosquitto.conf
+
+echo "services:" > docker-compose.yml
+echo "  mosquitto:" >> docker-compose.yml
+echo "    image: eclipse-mosquitto:latest" >> docker-compose.yml
+echo "    container_name: mosquitto" >> docker-compose.yml
+echo "    ports:" >> docker-compose.yml
+echo "      - \"1883:1883\"" >> docker-compose.yml
+echo "    volumes:" >> docker-compose.yml
+echo "      - ./mosquitto.conf:/mosquitto/config/mosquitto.conf" >> docker-compose.yml
+
+docker-compose up -d
+
