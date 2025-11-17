@@ -1,7 +1,7 @@
 
 const mqtt = require('mqtt');
 
-const options = { host: '[your Pi IP address]' };
+const options = { host: '192.168.0.69' };
 
 const connection = mqtt.connect(options);
 

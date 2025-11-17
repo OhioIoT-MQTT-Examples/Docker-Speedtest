@@ -1,15 +1,5 @@
 #!/bin/bash
 
-sudo apt update
-sudo apt upgrade -y
-curl -sSL https://get.docker.com | sh
-
-## replace with your linux user below (replace 'lvincek' with your user)
-sudo usermod -aG docker $USER
-
-sudo systemctl enable docker
-sg docker -c "whoami && groups"
-
 sudo apt install docker-compose-plugin
 sudo pip3 install docker-compose
 
