@@ -12,7 +12,7 @@ The code here is used in the YouTube video [MQTT - Using Docker](https://www.you
 ```
 git clone https://github.com/OhioIoT-MQTT-Examples/Docker-Speedtest.git
 ```
-update the IP addresses in ***/client1/app.js*** and ***/client2/app.js*** to match your Pi
+Update the IP addresses in ***/client1/app.js*** and ***/client2/app.js*** to match your Pi.
 
 ### Bare-Metal Test
 - copy the commands from ***/install-bare-metal/install*** and paste them in the command line on your Pi
