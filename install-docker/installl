@@ -3,7 +3,10 @@
 sudo apt update
 sudo apt upgrade -y
 curl -sSL https://get.docker.com | sh
-sudo usermod -aG docker lvincek
+
+## replace with your linux user below (replace 'lvincek' with your user)
+sudo usermod -aG docker $USER
+
 sudo systemctl enable docker
 sg docker -c "whoami && groups"
 
@@ -52,5 +55,5 @@ echo "      - \"1883:1883\"" >> docker-compose.yml
 echo "    volumes:" >> docker-compose.yml
 echo "      - ./mosquitto.conf:/mosquitto/config/mosquitto.conf" >> docker-compose.yml
 
-docker-compose up -d
+docker compose up -d
 
