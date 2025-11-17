@@ -7,6 +7,26 @@ docker --version
 docker compose version
 
 
+cd ~
+mkdir mosquitto
+cd mosquitto
+
+echo "listener 1883" > mosquitto.conf
+echo "allow_anonymous true" >> mosquitto.conf
+
+echo "services:" > docker-compose.yml
+echo "  mosquitto:" >> docker-compose.yml
+echo "    image: eclipse-mosquitto:latest" >> docker-compose.yml
+echo "    container_name: mosquitto" >> docker-compose.yml
+echo "    ports:" >> docker-compose.yml
+echo "      - \"1883:1883\"" >> docker-compose.yml
+echo "    volumes:" >> docker-compose.yml
+echo "      - ./mosquitto.conf:/mosquitto/config/mosquitto.conf" >> docker-compose.yml
+
+docker compose up -d
+
+
+
 
 
 # MOSQUITTO.CONF
@@ -26,24 +46,3 @@ docker compose version
 #       - "1883:1883"
 #     volumes:
 #       - ./mosquitto.conf:/mosquitto/config/mosquitto.conf
-
-
-
-cd ~
-mkdir mosquitto
-cd mosquitto
-
-echo "listener 1883" > mosquitto.conf
-echo "allow_anonymous true" >> mosquitto.conf
-
-echo "services:" > docker-compose.yml
-echo "  mosquitto:" >> docker-compose.yml
-echo "    image: eclipse-mosquitto:latest" >> docker-compose.yml
-echo "    container_name: mosquitto" >> docker-compose.yml
-echo "    ports:" >> docker-compose.yml
-echo "      - \"1883:1883\"" >> docker-compose.yml
-echo "    volumes:" >> docker-compose.yml
-echo "      - ./mosquitto.conf:/mosquitto/config/mosquitto.conf" >> docker-compose.yml
-
-docker compose up -d
-
