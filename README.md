@@ -14,27 +14,27 @@ git clone https://github.com/OhioIoT-MQTT-Examples/Docker-Speedtest.git
 ```
 
 ### Bare-Metal Test
-- copy the commands from ***install-bare-metal/install*** and paste them in the command line on your Pi
-- got to ***/client2***
+- copy the commands from ***/install-bare-metal/install*** and paste them in the command line on your Pi
+- go to ***/client2***
     - `npm install`
     - `node app`
-- got to ***/client1***
+- go to ***/client1***
     - `npm install`
     - `node app`
 - record the time
-- copy the commands from ***install-bare-metal/uninstall*** and paste them in the command line on your Pi
+- copy the commands from ***/install-bare-metal/uninstall*** and paste them in the command line on your Pi
 
 
 ### Docker Test
-- copy the commands from ***install-docker/install*** and paste them in the command line on your Pi
-- got to ***/client2***
+- copy the commands from ***/install-docker/install*** and paste them in the command line on your Pi
+- go to ***/client2***
     - `npm install`
     - `node app`
-- got to ***/client1***
+- go to ***/client1***
     - `npm install`
     - `node app`
 - record the time
-- copy the commands from ***install-docker/uninstall*** and paste them in the command line on your Pi
+- copy the commands from ***/install-docker/uninstall*** and paste them in the command line on your Pi
 
 
 ## About
