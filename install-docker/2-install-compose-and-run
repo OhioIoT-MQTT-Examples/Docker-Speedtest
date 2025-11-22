@@ -1,11 +1,7 @@
 #!/bin/bash
 
-sudo apt install docker-compose-plugin
-sudo pip3 install docker-compose
-
-docker --version
+sudo apt install -y docker-compose-plugin
 docker compose version
-
 
 cd ~
 mkdir mosquitto
@@ -25,24 +21,3 @@ echo "      - ./mosquitto.conf:/mosquitto/config/mosquitto.conf" >> docker-compo
 
 docker compose up -d
 
-
-
-
-
-# MOSQUITTO.CONF
-
-# listener 1883
-# allow_anonymous true
-
-
-
-# DOCKER-COMPOSE.YML
-
-# services:
-#   mosquitto:
-#     image: eclipse-mosquitto:latest
-#     container_name: mosquitto
-#     ports:
-#       - "1883:1883"
-#     volumes:
-#       - ./mosquitto.conf:/mosquitto/config/mosquitto.conf
