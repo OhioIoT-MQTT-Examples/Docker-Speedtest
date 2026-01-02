@@ -14,6 +14,7 @@ echo "services:" > docker-compose.yml
 echo "  mosquitto:" >> docker-compose.yml
 echo "    image: eclipse-mosquitto:latest" >> docker-compose.yml
 echo "    container_name: mosquitto" >> docker-compose.yml
+echo "    restart: always" >> docker-compose.yml
 echo "    ports:" >> docker-compose.yml
 echo "      - \"1883:1883\"" >> docker-compose.yml
 echo "    volumes:" >> docker-compose.yml
