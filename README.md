@@ -2,7 +2,9 @@
 
 
 ## Overview
-The code here is used in the YouTube video [MQTT - Using Docker](https://www.youtube.com/watch?v=k9CnF3siO6s).  Two basic NodeJS MQTT clients play ping pong 1000 times across a Mosquitto broker and then report how long the process takes to complete.  This is tested against a bare-metal installation and a Docker installation.  Check out the video for the result.
+
+https://youtu.be/dioklKf22XY
+The code here is used in the YouTube video [MQTT - Using Docker](https://youtu.be/dioklKf22XY).  Two basic NodeJS MQTT clients play ping pong 1000 times across a Mosquitto broker and then report how long the process takes to complete.  This is tested against a bare-metal installation and a Docker installation.  Check out the video for the result.
 
 
 👉 Subscribe to the [OhioIoT YouTube Channel](https://www.youtube.com/@OhioIoT?sub_confirmation=1) for more on "All Things IoT": hardware, firmware, connectivity, cloud computing, and dev toolkit.
