@@ -1,4 +1,4 @@
-# MQTT: Docker Speedtest <a href="https://www.ohioiot.com"><img src="https://www.ohioiot.com/images/logo.jpg" width="40" ></a>
+# MQTT: Docker Speedtest <a href="https://www.ohioiot.com"><img src="https://www.ohioiot.com/logo_150.jpg" width="40" ></a>
 
 
 ## Overview
